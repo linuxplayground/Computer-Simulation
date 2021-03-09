@@ -119,7 +119,7 @@ class _JMPInstruction(_Instruction):
 
 class _OUTInstruction(_Instruction):
     def process(self, computer):
-        print('[OUT] ' + computer._a)
+        print('[OUT] %s - %03d' % (computer._a, int(computer._a, 2)))
         computer._pc += 1
 
     def get_basename(self) -> str:
